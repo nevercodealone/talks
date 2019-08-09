@@ -1,7 +1,7 @@
 
 // COLORS
 
-$backgroundColor: #fcf8e3; //#eee;
+$backgroundColor: #000000;
 $mainColor: #222;
 $headingColor: #222;
 $contentBoxColor: lighten($mainColor, 50%);
@@ -9,7 +9,7 @@ $contentBoxColor: lighten($mainColor, 50%);
 $invertedPercentageBackground: 80%;
 $invertedPercentageMain: 100%;
 
-$linkColor: #2a76dd;
+$linkColor: #5ebb27;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
