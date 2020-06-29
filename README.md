@@ -116,7 +116,11 @@ reveal.js-webpack-kit/
 
 ```
 
-
+## Cypress
+Run
+```bash
+./node_modules/.bin/cypress run 
+```
 
 
 
