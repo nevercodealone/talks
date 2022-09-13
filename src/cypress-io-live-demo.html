@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Cypress.IO Talk über Motivation für Website Testing, Setup und live Demo</title>
+    <meta name="description" content="Talk über die Motivation für automatisierte E2E mit Cypress.IO und Live Demo"/>
+    <link rel="shortcut icon" href="content/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="content/images/favicon.ico" type="image/x-icon">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145839452-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-145839452-1');
+    </script>
+    <!-- Matomo -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//stats.nevercodealone.de/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '6']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+            <section data-background="content/images/nca-logo-slide.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/kill-bugs-roland-golla.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-2.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-3.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-8.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/nca-matrix-background.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+                <pre><code data-trim data-noescape>
+                    cy.get('[type="text"]').type('admin');
+                    cy.get('[type="password"]').type('admin');
+                    cy.contains('Login').click();
+                
+                    cy.contains('div', 'Phone Number').find('input').first().type('017624727747')
+                </code></pre>
+            </section>
+            <section data-background="content/images/nca-matrix-background.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CKAvbuSjxNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-11.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-12.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-17.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-19.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/nca-logo-slide.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+        </section>
+    </div> <!-- slides -->
+</div> <!-- reveal -->
+</html>
