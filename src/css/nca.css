@@ -1,0 +1,74 @@
+
+
+.reveal .controls, .reveal .progress {
+    color: #5fbb28;
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    border: 0;
+    z-index: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.yellow {
+    color: yellow;
+}
+
+.nca-col{
+
+}
+.nca-col:after{
+    clear: both;
+}
+.nca-col-2{
+    float: left;
+    width: 50%;
+}
+.nca-col-3{
+    float: left;
+    width: 33%;
+}
+
+.text-left {
+    text-align: left;
+}
+
+div.font-fourtyfive-percent {
+    font-size: 45%;
+}
+
+div.font-fifty-percent {
+    font-size: 50%;
+}
+
+div.font-sixty-percent {
+    font-size: 60%;
+}
+
+div.font-seventy-percent {
+    font-size: 70%;
+}
+
+/* Overwrites */
+.reveal section img {
+    border: 0;
+    background: none;
+    margin-top: 0px;
+}
+
+
+/*Bildkorrektur*/
+
+
+.portrait  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
