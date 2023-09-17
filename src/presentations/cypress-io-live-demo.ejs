@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Cypress.IO Talk über Motivation für Website Testing, Setup und live Demo</title>
+    <% include ../includes/header.ejs %>
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+            <section data-background="content/images/nca-logo-slide.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/kill-bugs-roland-golla.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-2.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-3.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-8.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/nca-matrix-background.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+                <pre><code data-trim data-noescape>
+                    cy.get('[type="text"]').type('admin');
+                    cy.get('[type="password"]').type('admin');
+                    cy.contains('Login').click();
+                
+                    cy.contains('div', 'Phone Number').find('input').first().type('017624727747')
+                </code></pre>
+            </section>
+            <section data-background="content/images/nca-matrix-background.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CKAvbuSjxNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-11.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-12.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-17.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <section data-background="content/images/cypress-talk/nca-cypress-io-talk-19.jpg" data-background-repeat="no-repeat" data-background-size="contain"  data-background-position="center top"  data-background-attachment="fixed">
+            </section>
+            <% include ../includes/last-slide.ejs %>
+        </section>
+    </div> <!-- slides -->
+</div> <!-- reveal -->
+</html>
