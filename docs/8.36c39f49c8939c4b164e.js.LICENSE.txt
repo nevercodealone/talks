@@ -1,5 +1,9 @@
 /*!
-* reveal.js 4.5.0
+	 * reveal.js plugin that adds syntax highlight support.
+	 */
+
+/*!
+* reveal.js 5.0.1
 * https://revealjs.com
 * MIT licensed
 *
