@@ -5,20 +5,23 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "clean": "rimraf docs && rimraf node_modules/.cache",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Never Code Alone",
   "license": "MIT",
   "dependencies": {
     "ejs": "^3.1.9",
-    "reveal.js": "^4.5.0",
+    "highlight.js": "^11.9.0",
+    "reveal.js": "^5.0.1",
     "underscore": "^1.13.6"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "ejs-compiled-loader": "^3.1.0",
-    "ejs-loader": "^0.5.0",
     "html-webpack-plugin": "^5.5.3",
     "style-loader": "^3.3.3",
     "webpack": "^5.88.2",
