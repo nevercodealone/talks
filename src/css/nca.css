@@ -61,6 +61,7 @@ div.font-seventy-percent {
   border: 0;
   background: none;
   margin-top: 0px;
+  max-height: 500px;
 }
 
 .fragment.blur {
