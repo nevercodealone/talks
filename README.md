@@ -1,6 +1,6 @@
 # Never Code Alone Presentations
 
 ```console
-$ npm run bild
+$ npm run build
 $ npm start
 ```
