@@ -51,7 +51,10 @@ module.exports = (env, argv) => {
       }),
       ...templates,
       new CopyWebpackPlugin({
-        patterns: [{ from: "src/content", to: "content" }],
+        patterns: [
+          { from: "src/content", to: "content" },
+          { from: "src/CNAME", to: "CNAME" }
+        ],
       }),
     ],
     devServer: {
