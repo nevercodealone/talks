@@ -1,0 +1,269 @@
+<!doctype html><html lang="de"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Präsentationen Never Code Alone</title><link rel="shortcut icon" href="content/images/favicon.ico" type="image/x-icon"/><link rel="icon" href="content/images/favicon.ico" type="image/x-icon"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/><script>var _paq = _paq || [];
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "//stats.nevercodealone.de/";
+        _paq.push(["setTrackerUrl", u + "piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.type = "text/javascript";
+        g.async = true;
+        g.defer = true;
+        g.src = u + "piwik.js";
+        s.parentNode.insertBefore(g, s);
+      })();</script><style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background: linear-gradient(135deg, #0d0208 0%, #003b00 100%);
+        color: #00ff41;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 60px 20px;
+      }
+
+      /* Header */
+      header {
+        text-align: center;
+        margin-bottom: 80px;
+        animation: fadeInDown 0.8s ease;
+      }
+
+      header img {
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 30px;
+        filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+      }
+
+      .tagline {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 30px;
+        opacity: 0.8;
+        color: #00ff41;
+      }
+
+      /* Social Links */
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: rgba(0, 255, 65, 0.1);
+        border-radius: 50%;
+        color: #00ff41;
+        font-size: 24px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 255, 65, 0.3);
+      }
+
+      .social-links a:hover {
+        background: rgba(0, 255, 65, 0.2);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 255, 65, 0.3);
+        border-color: #00ff41;
+      }
+
+      /* Year Sections */
+      .year-section {
+        margin-bottom: 80px;
+        animation: fadeInUp 0.8s ease;
+        animation-fill-mode: both;
+      }
+
+      .year-section:nth-child(2) { animation-delay: 0.1s; }
+      .year-section:nth-child(3) { animation-delay: 0.2s; }
+      .year-section:nth-child(4) { animation-delay: 0.3s; }
+      .year-section:nth-child(5) { animation-delay: 0.4s; }
+
+      .year-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        gap: 20px;
+      }
+
+      .year-badge {
+        background: rgba(0, 255, 65, 0.15);
+        padding: 12px 35px;
+        border-radius: 50px;
+        font-size: 1.8rem;
+        font-weight: bold;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 5px 15px rgba(0, 255, 65, 0.2);
+        white-space: nowrap;
+        border: 2px solid rgba(0, 255, 65, 0.3);
+        color: #00ff41;
+      }
+
+      .year-badge.evergreen {
+        background: linear-gradient(135deg, #003b00 0%, #00ff41 100%);
+        border-color: #00ff41;
+      }
+
+      .year-line {
+        flex: 1;
+        height: 2px;
+        background: rgba(0, 255, 65, 0.3);
+      }
+
+      /* Talk Cards Grid */
+      .talks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .talk-card {
+        background: rgba(0, 255, 65, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 35px;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0, 255, 65, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .talk-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #003b00, #00ff41);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .talk-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .talk-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 255, 65, 0.3);
+        background: rgba(0, 255, 65, 0.1);
+        border-color: #00ff41;
+      }
+
+      .talk-title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #00ff41;
+      }
+
+      .talk-description {
+        font-size: 1rem;
+        opacity: 0.7;
+        line-height: 1.7;
+        margin-bottom: 25px;
+        color: #00ff41;
+      }
+
+      .talk-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #00ff41;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+      }
+
+      .talk-link:hover {
+        gap: 12px;
+        text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+      }
+
+      .talk-link::after {
+        content: '→';
+        font-size: 1.3rem;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 60px 20px 40px;
+        opacity: 0.6;
+        font-size: 0.95rem;
+        border-top: 1px solid rgba(0, 255, 65, 0.2);
+        margin-top: 60px;
+        color: #00ff41;
+      }
+
+      /* Animations */
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .talks-grid {
+          grid-template-columns: 1fr;
+        }
+
+        header img {
+          max-width: 200px;
+        }
+
+        .tagline {
+          font-size: 1.2rem;
+        }
+
+        .year-badge {
+          font-size: 1.3rem;
+          padding: 10px 25px;
+        }
+
+        .container {
+          padding: 40px 15px;
+        }
+
+        .year-section {
+          margin-bottom: 60px;
+        }
+      }</style><script defer="defer" src="startpage.66add1988fd51c911bb5.js"></script></head><body><div class="container"><header><img src="content/images/never-code-alone.png" alt="Never Code Alone Logo"/><div class="tagline">Technische Talks & Präsentationen</div><div class="social-links" data-cy="social-link"><a href="https://www.youtube.com/channel/UCjVT6iJ_wg7OM0DkV5TpNCQ" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i> </a><a href="https://twitter.com/nevercodealone" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i> </a><a href="https://www.facebook.com/nevercodealone/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook"></i> </a><a href="https://www.instagram.com/nevercodealone/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i> </a><a href="https://github.com/nevercodealone/talks" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a></div></header><section class="year-section"><div class="year-header"><div class="year-badge">2024</div><div class="year-line"></div></div><div class="talks-grid"><div class="talk-card"><h3 class="talk-title">AI Keynote</h3><p class="talk-description">Künstliche Intelligenz in der Softwareentwicklung - Chancen, Herausforderungen und praktische Anwendungen.</p><a href="ai-keynote.html" class="talk-link">Präsentation ansehen</a></div><div class="talk-card"><h3 class="talk-title">Webdesign Accessibility</h3><p class="talk-description">Barrierefreies Webdesign - Best Practices für zugängliche und inklusive Web-Anwendungen.</p><a href="accessibility-talk.html" class="talk-link">Präsentation ansehen</a></div></div></section><section class="year-section"><div class="year-header"><div class="year-badge">2023</div><div class="year-line"></div></div><div class="talks-grid"><div class="talk-card"><h3 class="talk-title">Freelancer zu Startup</h3><p class="talk-description">Der Weg vom Solo-Entwickler zum erfolgreichen Startup - Erfahrungen, Lessons Learned und praktische Tipps.</p><a href="freelancer-startup.html" class="talk-link">Präsentation ansehen</a></div><div class="talk-card"><h3 class="talk-title">Vim für Entwickler</h3><p class="talk-description">Produktivitätssteigerung mit Vim - Grundlagen, fortgeschrittene Techniken und Workflows.</p><a href="vim.html" class="talk-link">Präsentation ansehen</a></div></div></section><section class="year-section"><div class="year-header"><div class="year-badge">2022</div><div class="year-line"></div></div><div class="talks-grid"><div class="talk-card"><h3 class="talk-title">Develop Yourself</h3><p class="talk-description">Persönliche Weiterentwicklung als Developer - Kontinuierliches Lernen und Karriereplanung.</p><a href="develop-yourself.html" class="talk-link">Präsentation ansehen</a></div><div class="talk-card"><h3 class="talk-title">Cypress.IO Live Demo</h3><p class="talk-description">End-to-End Testing mit Cypress - Live-Demo und Best Practices für moderne Web-Applikationen.</p><a href="cypress-io-live-demo.html" class="talk-link">Präsentation ansehen</a></div></div></section><section class="year-section"><div class="year-header"><div class="year-badge evergreen">Evergreen</div><div class="year-line"></div></div><div class="talks-grid"><div class="talk-card"><h3 class="talk-title">Developer - Ein Job der rockt</h3><p class="talk-description">Warum Software-Entwicklung einer der spannendsten Berufe unserer Zeit ist.</p><a href="developer-ein-job-der-rockt.html" class="talk-link">Präsentation ansehen</a></div><div class="talk-card"><h3 class="talk-title">Bandquotes für Developer</h3><p class="talk-description">Inspirierende Zitate aus der Musikwelt mit Bezug zur Softwareentwicklung.</p><a href="bandquotes-for-developer.html" class="talk-link">Präsentation ansehen</a></div><div class="talk-card"><h3 class="talk-title">Softwarequalität === Gesundheit V1</h3><p class="talk-description">Der Zusammenhang zwischen Code-Qualität und Entwickler-Wohlbefinden.</p><a href="softwarequalitaet-gesundheit-v1.html" class="talk-link">Präsentation ansehen</a></div><div class="talk-card"><h3 class="talk-title">Softwarequalität === Gesundheit V2</h3><p class="talk-description">Erweiterte Version: Clean Code, Testing und Work-Life-Balance in der Praxis.</p><a href="softwarequalitaet-gesundheit-v2.html" class="talk-link">Präsentation ansehen</a></div></div></section><footer><p>&copy; 2024 Never Code Alone | Alle Präsentationen sind Open Source</p></footer></div></body></html>
