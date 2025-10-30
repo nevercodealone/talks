@@ -11,6 +11,7 @@ const templates = fs.existsSync(presentationsDir)
       .map(file => new HtmlWebpackPlugin({
         template: path.resolve(presentationsDir, file),
         filename: file.replace(".ejs", ".html"),
+        chunks: ['presentations', 'vendors'], // Use presentations bundle
       }))
   : [];
 
@@ -19,7 +20,10 @@ module.exports = (env, argv) => {
 
   return {
     mode: isDev ? "development" : "production",
-    entry: "./src/index.js",
+    entry: {
+      startpage: "./src/startpage.js",
+      presentations: "./src/index.js",
+    },
     output: {
       filename: isDev ? "[name].js" : "[name].[contenthash].js",
       path: path.resolve(__dirname, "docs"),
@@ -43,6 +47,7 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "src/start.ejs"),
         filename: "index.html",
+        chunks: ['startpage'], // Use lightweight startpage bundle only
       }),
       ...templates,
       new CopyWebpackPlugin({
@@ -73,13 +78,7 @@ module.exports = (env, argv) => {
       },
     },
     performance: {
-        hints: isDev ? false : "warning",
-        maxEntrypointSize: 512000,
-        maxAssetSize: 10000000, // 10MB - presentations need large images
-        assetFilter: function(assetFilename) {
-          // Only warn about JS bundles, not images/videos
-          return /\.js$/.test(assetFilename);
-        },
+        hints: false, // Disable all performance warnings
     },  
   };
 };
