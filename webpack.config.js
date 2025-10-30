@@ -4,13 +4,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const templates = fs
-  .readdirSync(path.resolve(__dirname, "src/presentations"))
-  .filter(file => file.endsWith('.ejs'))
-  .map(file => new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, `src/presentations/${file}`),
-    filename: file.replace(".ejs", ".html"),
-  }));
+const presentationsDir = path.resolve(__dirname, "src/presentations");
+const templates = fs.existsSync(presentationsDir)
+  ? fs.readdirSync(presentationsDir)
+      .filter(file => file.endsWith('.ejs'))
+      .map(file => new HtmlWebpackPlugin({
+        template: path.resolve(presentationsDir, file),
+        filename: file.replace(".ejs", ".html"),
+      }))
+  : [];
 
 module.exports = (env, argv) => {
   const isDev = argv.mode === 'development';
@@ -23,7 +25,7 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, "docs"),
       clean: true, // Clean the output directory before emit.
     },
-    devtool: isDev ? 'eval-source-map' : 'source-map',
+    devtool: isDev ? 'eval-source-map' : false,
     module: {
       rules: [
         {
@@ -56,12 +58,28 @@ module.exports = (env, argv) => {
     optimization: {
       splitChunks: {
         chunks: "all",
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: "vendors",
+            priority: 10,
+          },
+          highlight: {
+            test: /[\\/]node_modules[\\/]highlight\.js/,
+            name: "highlight",
+            priority: 20,
+          },
+        },
       },
     },
     performance: {
-        hints: false,
-        maxEntrypointSize: Infinity,
-        maxAssetSize: Infinity,
+        hints: isDev ? false : "warning",
+        maxEntrypointSize: 512000,
+        maxAssetSize: 10000000, // 10MB - presentations need large images
+        assetFilter: function(assetFilename) {
+          // Only warn about JS bundles, not images/videos
+          return /\.js$/.test(assetFilename);
+        },
     },  
   };
 };
