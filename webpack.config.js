@@ -53,7 +53,7 @@ module.exports = (env, argv) => {
       new CopyWebpackPlugin({
         patterns: [
           { from: "src/content", to: "content" },
-          { from: "src/CNAME", to: "CNAME" }
+          { from: "src/CNAME", to: "." }
         ],
       }),
     ],
