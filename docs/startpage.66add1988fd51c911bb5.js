@@ -1,1 +1,0 @@
-console.log("Never Code Alone - Startpage loaded");
