@@ -216,6 +216,12 @@
         font-size: 1.3rem;
       }
 
+      .talk-link--en {
+        margin-top: 12px;
+        font-size: 0.85rem;
+        opacity: 0.65;
+      }
+
       footer {
         text-align: center;
         padding: 60px 20px 40px;
@@ -322,6 +328,9 @@
                   <%= talk.startPageDescription %>
                 </p>
                 <a href="<%= talk.id %>.html" class="talk-link">Präsentation ansehen</a>
+                <% if (talk.id === 'vibe-coding-start') { %>
+                  <a href="vibe-coding-start-en.html" class="talk-link talk-link--en">EN version</a>
+                <% } %>
               </div>
             <% }); %>
           </div>

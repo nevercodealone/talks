@@ -48,6 +48,18 @@ customTalks.forEach(function(talk) {
   }
 });
 
+var standaloneEnglishTalks = ["vibe-coding-start-en"];
+standaloneEnglishTalks.forEach(function(id) {
+  var templatePath = path.resolve(presentationsDir, id + ".ejs");
+  if (fs.existsSync(templatePath)) {
+    plugins.push(new HtmlWebpackPlugin({
+      template: templatePath,
+      filename: id + ".html",
+      chunks: ['presentations', 'vendors'],
+    }));
+  }
+});
+
 plugins.push(new HtmlWebpackPlugin({
   templateContent: ejs.render(startTemplate, { talks: talksData }),
   filename: "index.html",
