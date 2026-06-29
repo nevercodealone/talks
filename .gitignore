@@ -16,6 +16,9 @@ yarn-error.log
 # Umgebungsvariablen
 .env
 
+# Track docs/ build output for GitHub Pages (overrides global core.excludesFile)
+!docs/
+
 # Andere temporäre oder generierte Dateien
 *.tmp
 *.swp
