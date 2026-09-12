@@ -5,6 +5,11 @@ a.nca-color {
   color: #5fbb28;
 }
 
+.nca-color-yellow,
+a.nca-color-yellow {
+  color: yellow;
+}
+
 .logo {
   position: absolute;
   top: 30px;
