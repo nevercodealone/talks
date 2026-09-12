@@ -1,5 +1,14 @@
 [
   {
+    "id": "nca-ai-workshop-belegschaft",
+    "title": "NCA AI Workshop Belegschaft - Never Code Alone",
+    "description": "AI Workshop für die Belegschaft - KI im Alltag, eigene Tools, Vibe Coding und eine Demo Applikation an einem Tag",
+    "year": 2026,
+    "startPageTitle": "NCA AI Workshop Belegschaft",
+    "startPageDescription": "Ein ganzer Tag für die Belegschaft: KI im Alltag, Content Marketing, eigene Tools aus Vibe Coding und eine Demo Applikation.",
+    "custom": true
+  },
+  {
     "id": "chatbot-wahrheit",
     "title": "Chatbots - Die Erwartung vs. Die Wahrheit - Never Code Alone",
     "description": "Chatbots in der Praxis - Was erwartet wird, was wirklich passiert und wie es besser geht",
