@@ -62,6 +62,10 @@ div.font-seventy-percent {
 }
 
 /* Overwrites */
+.reveal li {
+  line-height: 1.2;
+}
+
 .reveal section img {
   border: 0;
   background: none;
